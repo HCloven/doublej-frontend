@@ -53,4 +53,46 @@ const Login = () => {
             <input
               type="email"
               className="w-full border rounded px-3 py-2"
-              value
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div>
+            <label className="block font-medium mb-1">Password</label>
+            <input
+              type="password"
+              className="w-full border rounded px-3 py-2"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              placeholder="••••••••"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+          >
+            {loading ? "Logging in..." : "Login"}
+          </button>
+        </form>
+
+        <p className="text-center mt-4 text-sm">
+          Don’t have an account?{" "}
+          <span
+            className="text-blue-600 cursor-pointer"
+            onClick={() => navigate("/portal/register")}
+          >
+            Register
+          </span>
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
