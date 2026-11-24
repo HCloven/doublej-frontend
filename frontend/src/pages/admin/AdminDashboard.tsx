@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-export default function AdminDashboard() {
-    return (
-      <div className="p-6">
-        <h1 className="text-2xl font-bold">Admin Dashboard</h1>
-        <p>This is a placeholder for the admin dashboard.</p>
-      </div>
-    );
-  }
-=======
 import { useEffect, useState } from "react";
 import AdminLayout from "../../components/AdminLayout";
 import api from "../../utils/api";
@@ -63,4 +53,3 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
->>>>>>> ce9e341c419b17a1c31b387d58a4eb73816f6091
